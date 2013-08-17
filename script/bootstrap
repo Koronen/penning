@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+set -e
+
+# Bundle
+echo "[+] Running 'bundle install'..."
+bundle install
