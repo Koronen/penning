@@ -29,3 +29,5 @@ class Penning < Sinatra::Base
     haml :front_page
   end
 end
+
+require_relative 'controllers/vouchers_controller'

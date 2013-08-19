@@ -21,7 +21,7 @@
           = link_to t('layout.nav.brand'), '/', class: 'navbar-brand'
         .collapse.navbar-collapse
           .nav.navbar-nav
-            %li.active
+            %li{class: ('active' if request.path_info.start_with?('/vouchers'))}
               = link_to t('layout.nav.vouchers'), '/vouchers'
     .container
       = yield
