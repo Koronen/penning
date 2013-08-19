@@ -11,21 +11,17 @@
     = stylesheet_tag 'application'
     = javascript_tag 'application', expand: true
   %body
-    .navbar.navbar-inverse.navbar-fixed-top
+    .navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header
           %button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
             %span(class="icon-bar")
             %span(class="icon-bar")
             %span(class="icon-bar")
-          %a(class="navbar-brand" href="#") Penning
+          = link_to t('layout.nav.brand'), '/', class: 'navbar-brand'
         .collapse.navbar-collapse
           .nav.navbar-nav
             %li.active
-              %a(href="#") Home
-            %li
-              %a(href="#about") About
-            %li
-              %a(href="#contact") Contact
+              = link_to t('layout.nav.vouchers'), '/vouchers'
     .container
       = yield
