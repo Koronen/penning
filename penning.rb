@@ -4,6 +4,8 @@ require 'sinatra/asset_pipeline'
 require 'i18n'
 I18n.load_path += Dir[File.join(File.dirname(__FILE__), 'config/locales', '*.yml').to_s]
 
+require_relative 'helpers/url_helper'
+
 class Penning < Sinatra::Base
   register Sinatra::AssetPipeline
 
@@ -12,6 +14,8 @@ class Penning < Sinatra::Base
   end
 
   helpers do
+    include UrlHelper
+
     def t(*args)
       I18n.t(*args)
     end
