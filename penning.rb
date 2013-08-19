@@ -26,6 +26,6 @@ class Penning < Sinatra::Base
   end
 
   get '/' do
-    haml :index
+    haml :front_page
   end
 end
