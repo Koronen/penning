@@ -7,6 +7,10 @@ I18n.load_path += Dir[File.join(File.dirname(__FILE__), 'config/locales', '*.yml
 class Penning < Sinatra::Base
   register Sinatra::AssetPipeline
 
+  configure do
+    enable :logging
+  end
+
   helpers do
     def t(*args)
       I18n.t(*args)
