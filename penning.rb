@@ -9,6 +9,8 @@ require_relative 'helpers/url_helper'
 class Penning < Sinatra::Base
   register Sinatra::AssetPipeline
 
+  set :assets_precompile, %w(application.js application.css *.png *.jpg *.svg *.eot *.ttf *.woff)
+
   configure do
     enable :logging
   end
