@@ -11,9 +11,13 @@ group :assets do
   gem 'sinatra-asset-pipeline', '~> 0.2.0'
 end
 
+group :development, :test do
+  gem 'pry', '~> 0.9.12.2'
+end
+
 group :test do
-  gem 'minitest'
-  gem 'rack-test'
+  gem 'minitest', '~> 5.0.6'
+  gem 'rack-test', '~> 0.6.2'
   gem 'dm-sqlite-adapter', '~> 1.2.0'
 end
 
