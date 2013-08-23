@@ -1,7 +1,7 @@
-class Voucher
-  attr_reader :title
+require 'dm-core'
 
-  def initialize(title)
-    @title = title
-  end
+class Voucher
+  include DataMapper::Resource
+
+  property :title, String, key: true
 end

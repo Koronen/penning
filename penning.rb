@@ -7,6 +7,15 @@ require 'sinatra/asset_pipeline'
 require 'i18n'
 I18n.load_path += Dir[File.join(File.dirname(__FILE__), 'config/locales', '*.yml')]
 
+require 'data_mapper'
+DataMapper::Logger.new($stdout, :debug) if ENV['RACK_ENV'] == 'development'
+DataMapper.setup(:default, ENV['DATABASE_URL'])
+
+require_relative 'models/voucher'
+
+DataMapper.finalize
+DataMapper.auto_upgrade!
+
 require_relative 'helpers/url_helper'
 
 require_relative 'repositories/voucher_repository'

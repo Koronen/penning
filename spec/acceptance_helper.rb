@@ -1,5 +1,6 @@
 require_relative 'unit_helper'
 
+require 'haml'
 require 'rack/test'
 
 require_relative '../penning'

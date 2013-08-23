@@ -1,13 +1,11 @@
 require_relative '../models/voucher'
 
 module VoucherRepository
-  @@vouchers = []
-
   def self.save(voucher)
-    @@vouchers << voucher
+    voucher.save
   end
 
   def self.fetch_recent
-    @@vouchers
+    Voucher.all
   end
 end
