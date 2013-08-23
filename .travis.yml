@@ -1,5 +1,4 @@
 language: ruby
-env: DATABASE_URL="sqlite::memory:"
 rvm:
   - 1.9.2
   - 1.9.3
