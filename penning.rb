@@ -1,8 +1,8 @@
-require 'sinatra'
+require 'sinatra/base'
 require 'sinatra/asset_pipeline'
 
 require 'i18n'
-I18n.load_path += Dir[File.join(File.dirname(__FILE__), 'config/locales', '*.yml').to_s]
+I18n.load_path += Dir[File.join(File.dirname(__FILE__), 'config/locales', '*.yml')]
 
 require_relative 'helpers/url_helper'
 
