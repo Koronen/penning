@@ -1,1 +1,18 @@
-%h1= t('index.hello_world')
+.jumbotron
+  %h1= t('front_page.welcome')
+  %p= t('front_page.tagline')
+
+.panel.panel-default
+  .panel-heading
+    = t('front_page.recent_vouchers')
+  .panel-body
+    - unless recent_vouchers.empty?
+      %table.table.table-condensed.table-hover
+        %thead
+          %th= t('voucher.title')
+        %tbody
+        - recent_vouchers.each do |voucher|
+          %tr
+            %td= voucher.title
+    - else
+      %p= t('common.none')

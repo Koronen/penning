@@ -4,5 +4,13 @@ en:
       brand: Penning
       vouchers: Vouchers
 
-  index:
-    hello_world: Hello World!
+  front_page:
+    welcome: Welcome to Penning!
+    tagline: The work-in-progress self-hosted bookkeeping system.
+    recent_vouchers: Recent vouchers
+
+  voucher:
+    title: Title
+
+  common:
+    none: (none)

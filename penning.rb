@@ -6,6 +6,8 @@ I18n.load_path += Dir[File.join(File.dirname(__FILE__), 'config/locales', '*.yml
 
 require_relative 'helpers/url_helper'
 
+require_relative 'repositories/voucher_repository'
+
 class Penning < Sinatra::Base
   register Sinatra::AssetPipeline
 
@@ -28,7 +30,8 @@ class Penning < Sinatra::Base
   end
 
   get '/' do
-    haml :front_page
+    recent_vouchers = VoucherRepository.fetch_recent
+    render :haml, :front_page, locals: { recent_vouchers: recent_vouchers }
   end
 end
 
