@@ -1,5 +1,6 @@
 class Penning < Sinatra::Base
   get '/vouchers' do
-    haml :'vouchers/index'
+    vouchers = VoucherRepository.fetch_all
+    render :haml, :'vouchers/index', locals: { vouchers: vouchers }
   end
 end

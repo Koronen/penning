@@ -3,6 +3,10 @@ require_relative '../acceptance_helper'
 require_relative '../../repositories/voucher_repository'
 
 describe 'Front Page' do
+  after do
+    VoucherRepository.purge!
+  end
+
   it 'should contain a welcome phrase' do
     get '/'
 

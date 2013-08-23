@@ -9,7 +9,8 @@
     - unless recent_vouchers.empty?
       %table.table.table-condensed.table-hover
         %thead
-          %th= t('voucher.title')
+          %tr
+            %th= t('voucher.title')
         %tbody
         - recent_vouchers.each do |voucher|
           %tr
