@@ -18,7 +18,12 @@ end
 group :test do
   gem 'minitest', '~> 5.0.6'
   gem 'rack-test', '~> 0.6.2'
+
   gem 'dm-sqlite-adapter', '~> 1.2.0'
+
+  gem 'guard', '~> 1.8.2'
+  gem 'guard-bundler', '~> 1.0.0'
+  gem 'guard-minitest', '~> 1.0.0'
 end
 
 group :production do
