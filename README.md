@@ -1,5 +1,7 @@
 # Penning
 
+[![Build Status](https://travis-ci.org/Koronen/penning.png)](https://travis-ci.org/Koronen/penning)
+
 A work-in-progress self-hosted bookkeeping system.
 
 ## Deploying to Heroku
