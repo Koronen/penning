@@ -8,7 +8,12 @@ gem 'dotenv', '~> 0.7.0'
 gem 'data_mapper', '~> 1.2.0'
 
 group :assets do
-  gem 'sinatra-asset-pipeline', '~> 0.2.0'
+  gem 'sprockets', '~> 2.10.0'
+  gem 'sprockets-sass', '~> 1.0.1'
+  gem 'sprockets-helpers', '~> 1.0.1'
+
+  gem 'sass', '~> 3.2.10'
+  gem 'coffee-script', '~> 2.2.0'
 end
 
 group :development, :test do
